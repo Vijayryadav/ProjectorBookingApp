@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_projector">
+
+    <fragment
+        android:id="@+id/navigation_projector"
+        android:name="com.example.projector_booking_app.ui.projector.ProjectorFragment"
+        android:label="@string/title_projector"
+        tools:layout="@layout/fragment_projector" >
+        <action
+            android:id="@+id/action_navigation_projector_to_navigation_bookprojector"
+            app:destination="@+id/navigation_projector">
+            <argument
+                android:name="projectorId"
+                app:argType="string" />
+            <argument
+                android:name="projectorName"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.projector_booking_app.ui.notification.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_reports"
+        android:name="com.example.projector_booking_app.ui.report.ReportFragment"
+        android:label="@string/title_reports"
+        tools:layout="@layout/fragment_report" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.projector_booking_app.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_bookprojector"
+        android:name="com.example.projector_booking_app.ui.bookprojector.BookProjectorFragment"
+        android:label="@string/title_book_projector"
+        tools:layout="@layout/fragment_projector" >
+        <action
+            android:id="@+id/action_bookprojectornavigation__to_navigation_projector"
+            app:destination="@id/navigation_projector" />
+    </fragment>
+</navigation>

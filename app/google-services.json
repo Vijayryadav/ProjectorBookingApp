@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1090184080555",
+    "project_id": "projector-booking-app",
+    "storage_bucket": "projector-booking-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090184080555:android:2b6eaccebaa6b2e66bdbee",
+        "android_client_info": {
+          "package_name": "com.example.projector_booking_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDq39wueNEStWeQQwfs7UZAdDCDsAuKw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

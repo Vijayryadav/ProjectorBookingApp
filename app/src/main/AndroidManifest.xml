@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,14 +13,33 @@
         android:theme="@style/Theme.ProjectorBookingApp"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".activities.HomeActivity"
+            android:exported="false">
+
+        </activity>
+        <service
+            android:name=".MessagingFirebase"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- Set custom default icon. This is used when no icon is set for incoming notification messages. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@color/teal_200" /> <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_not+
+            ification_color"
+            android:resource="@color/teal_700" />
     </application>
 
 </manifest>
